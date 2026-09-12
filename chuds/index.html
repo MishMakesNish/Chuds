@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuds — Leaderboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="topbar-root"></div>
+
+  <main class="page">
+    <div class="page-head">
+      <h1 class="page-title">Top 10</h1>
+      <p class="page-sub">Every night, whoever's 1st on a lift's leaderboard earns 5 points, 2nd earns 3, 3rd earns 1. First to 100 wins the race.</p>
+    </div>
+
+    <div id="race-panel" class="race-panel">
+      <div class="race-panel__head">
+        <span class="race-panel__title">Race to 100</span>
+        <span class="race-panel__sub">POINTS AWARDED NIGHTLY</span>
+      </div>
+      <div id="race-lanes"><!-- injected by main.js --></div>
+    </div>
+
+    <div id="board" class="board">
+      <!-- rows injected by main.js -->
+    </div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

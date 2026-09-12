@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuds — Log Lift</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="topbar-root"></div>
+
+  <main class="page">
+    <div class="page-head">
+      <h1 class="page-title">Log a lift</h1>
+      <p class="page-sub">Pick the exercise, enter your result, and attach proof. If it's a new personal best, it'll update your ranking straight away.</p>
+    </div>
+
+    <form id="log-form" class="form-card">
+      <div class="field">
+        <label for="exercise-select">Exercise</label>
+        <select id="exercise-select" required></select>
+      </div>
+
+      <div id="value-fields"><!-- injected based on exercise type --></div>
+
+      <div class="field">
+        <label for="proof-input">Proof (video or photo) — optional</label>
+        <label class="file-drop" id="file-drop-label" for="proof-input">
+          <span id="file-drop-text">Click to attach a video or photo of the lift (optional)</span>
+          <input id="proof-input" type="file" accept="image/*,video/*" />
+        </label>
+        <p class="help-text">Optional. For now this only records the file's name as a label next to your entry — not the actual photo/video itself.</p>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">Submit lift</button>
+      <div id="status-msg" class="status-msg"></div>
+    </form>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/format.js"></script>
+  <script src="js/log-lift.js"></script>
+</body>
+</html>

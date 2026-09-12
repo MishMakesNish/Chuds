@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuds — Leaderboards</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="topbar-root"></div>
+
+  <section class="hero-banner">
+    <h1 class="hero-banner__title">LEADERBOARD</h1>
+  </section>
+
+  <main class="page" style="padding-top:0;">
+    <div class="pr-section">
+      <h2 class="section-title" style="margin-top:0;">PR's</h2>
+      <p class="page-sub" style="margin-bottom:20px;">True 1-rep maxes only — separate from the regular leaderboards below, and worth double points nightly.</p>
+      <div id="pr-tile-grid" class="tile-grid"></div>
+    </div>
+
+    <p class="page-sub" style="margin-bottom:28px;">Pick a lift to see who's on top. Boxes will show a photo once you add one — for now they're placeholders.</p>
+    <div id="tile-grid" class="tile-grid"></div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/leaderboards.js"></script>
+</body>
+</html>
